@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+
+
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="shooting-star"></div>
+
+  <!-- Form -->
+  <div class="container">
+    <div class="form-box">
+      <div class="form-inner">
+
+        <!-- LOGIN PANEL -->
+        <div class="form-panel login-panel">
+          <h1>Login</h1>
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="Username">
+            </div>
+
+            <div class="input-group password-group">
+              <input type="password" placeholder="Password" id="login-password">
+              <i class="fa-solid fa-eye toggle-password" data-target="login-password"></i>
+            </div>
+
+            <!-- Captcha -->
+            <div class="input-group captcha-group">
+              <input type="text" placeholder="Enter Captcha" id="login-captcha">
+              <span id="captcha-code"></span>
+            </div>
+
+            <!-- Remember Me -->
+            <div class="options">
+              <label class="switch">
+                <input type="checkbox" id="remember">
+                <span class="slider"></span>
+              </label>
+              <span class="switch-label">Remember Me</span>
+              <a href="#" id="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="button" class="btn login-btn">Login</button>
+          </form>
+          <p>Don’t have an account? <a href="#" class="switch-btn">Sign Up</a></p>
+        </div>
+
+        <!-- SIGNUP PANEL -->
+        <div class="form-panel signup-panel">
+          <h1>Sign Up</h1>
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="Username">
+            </div>
+
+            <div class="input-group">
+              <input type="email" placeholder="Email" id="signup-email">
+            </div>
+
+            <div class="input-group password-group">
+              <input type="password" placeholder="Password" id="signup-password">
+              <i class="fa-solid fa-eye toggle-password" data-target="signup-password"></i>
+            </div>
+
+            <!-- Strength -->
+            <div class="strength-bar">
+              <div id="strength-fill"></div>
+            </div>
+            <p id="strength-text">Strength: Weak</p>
+
+            <div class="input-group password-group">
+              <input type="password" placeholder="Confirm Password" id="confirm-password">
+              <i class="fa-solid fa-eye toggle-password" data-target="confirm-password"></i>
+            </div>
+
+            <!-- Captcha -->
+            <div class="input-group captcha-group">
+              <input type="text" placeholder="Enter Captcha" id="signup-captcha">
+              <span id="captcha-code2"></span>
+            </div>
+
+            <!-- I Agree Switch -->
+            <div class="terms">
+              <label class="switch">
+                <input type="checkbox" id="agree">
+                <span class="slider"></span>
+              </label>
+              <span class="switch-label">I agree to 
+                <a href="#" id="open-terms">Terms & Policy</a>
+              </span>
+            </div>
+
+            <button type="button" class="btn signup-btn">Create Account</button>
+          </form>
+          <p>Already have an account? <a href="#" class="switch-btn">Login</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="terms-modal" class="modal">
+    <div class="modal-content">
+      <h2>Terms & Privacy Policy</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus ac dui vitae tortor facilisis gravida...</p>
+      <button id="close-terms" class="btn">Close</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<audio id="click-sound" src="sound-click.mp3"></audio>
+</body>
+</html>
